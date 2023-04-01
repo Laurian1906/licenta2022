@@ -5,9 +5,9 @@ ignore_user_abort(true);
 set_time_limit(0);
 
 // Prepare variables for database connection
-$dbusername = "3982527_monreg2";
-$dbpassword = "123456789abcd";
-$server = "fdb34.awardspace.net";
+$dbusername = "";
+$dbpassword = "";
+$server = "";
 
 // Connect to database
 $dbconnect = mysqli_connect($server, $dbusername, $dbpassword);
