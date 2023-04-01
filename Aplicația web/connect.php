@@ -1,8 +1,8 @@
 <?php
 
-$dbusername = "3982527_monreg2";
-$dbpassword = "123456789abcd";
-$server = "fdb34.awardspace.net";
+$dbusername = "";
+$dbpassword = "";
+$server = "";
 
 // Conectare
 
