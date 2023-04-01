@@ -1,0 +1,367 @@
+    *{
+      padding:0;
+      margin:0;
+      box-sizing:border-box;
+    }
+    body, html{
+        width:100%;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 400;
+        flex-direction:column;
+        height:100vh;
+        display:flex;
+    }
+    header{
+      min-width:100%;
+      min-height:100vh;
+      display:flex;
+      flex-direction:column;
+      position:relative;
+      background-image: linear-gradient(rgba(22, 54, 150, 0.857),
+      rgba(22, 54, 150, 0.8)), 
+      url(/resources/img/termometru.jpg);
+    }
+    .hideMe{
+      display:none;
+    }
+    .title{
+        width: 100%;
+        height: 100%;
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        text-align: center;
+    }
+    .title h2{
+        font-size:90px;
+        color:white;
+    }
+    .title h3{
+        font-size:25px;
+        position:relative;
+        color:white;
+    }
+    .temp{
+        width:100%;
+        text-align:center;
+        position:relative;
+        top:20px;
+    }
+    .temp p{
+        font-size:30px;
+        font-weight: 700;
+        color:black;
+    }
+    .temp .reading{
+        color: black;
+    }
+    .temp i{
+        color:black;
+    }
+    #container{
+      width: 100%;
+      height: 450px;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      padding: 20px;
+      position:relative;
+      top:20px;
+      margin: 0 auto;
+    }
+    .sidemenu{
+      background-color:white;
+      position:absolute;
+      left:0;
+      width:100%;
+      height:55px;
+      transition: 0.3s all ease;
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      z-index:2;
+    }
+    .sidemenu ul{
+      list-style: none;
+      position: absolute;
+      top:0px;
+      display:flex;
+    }
+    .sidemenu ul li{
+      padding-right:25px;
+      float: left;
+    }
+    .sidemenu ul li a{
+      text-decoration: none;
+      color:rgb(8, 8, 8);
+      padding-left:0px;
+      transition: 0.3s all ease;
+      font-size:20px;
+      position: relative;
+      top:70%;
+    }
+    .sidemenu ul li a:hover{
+      color:royalblue;
+      transition: 0.3s all ease;
+    }
+    .titlemenu{
+      top:60px;
+      margin-bottom:170px;
+      padding-left:36px;
+      font-weight: 800;
+      position:relative;
+    }
+    .live{
+      min-width:100%;
+      min-height:650px;
+      display:block;
+      position:relative;
+      top:0px;
+      display:flex;
+      flex-direction: column;
+      background-color: white;
+      
+    }
+    /* Scroll bar */
+    ::-webkit-scrollbar{
+      width:10px;
+    }
+    ::-webkit-scrollbar-track{
+      background:#ffffff;
+      border-radius:50px;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: rgb(22, 54, 150);
+      border-radius:50px;
+    }
+    .titlulive{
+      color:black;
+      width:100%;
+      text-align: center;
+      position:relative;
+      top:20px;
+      font-size:45px;
+    }
+    .statistici{
+      min-width:100%;
+      min-height:750px;
+      display: flex;
+      flex-direction: column;
+      background: rgb(55, 82, 161);
+    }
+    .titlustatistici{
+      color:white;
+      width:100%;
+      text-align: center;
+      position:relative;
+      top:20px;
+      font-size:45px;
+    }
+    #stats1{
+      width: 100%;
+      height: 300px;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      padding: 20px;
+      position:relative;
+      top:20px;
+      margin: 0 auto;
+    }
+    #stats2{
+      width: 100%;
+      height: 300px;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      padding: 20px;
+      position:relative;
+      top:20px;
+      margin: 0 auto;
+    }
+    .mobile-menu{
+      display: none;
+    }
+    .fa-bars{
+      display: none;
+    }
+    #form{
+      position:relative;
+      z-index:3;
+      width:100%;
+      color:white;
+      text-align:center;
+      top:5px;
+    }
+    
+    
+    .alerte{
+      min-width:100%;
+      min-height:900px;
+      display:block;
+      flex-direction:column;
+      background: white;
+      padding:17px 17px;
+    }    
+.titlualerte{
+      color:rgb(55, 82, 161);
+      width:100%;
+      text-align: center;
+      position:relative;
+      top:20px;
+      font-size:45px;
+    }
+    #generatedAlerts{
+      width:100%;
+      height:auto;
+      display:flex;
+      flex-direction:column;
+      align-content:center;
+      text-align:center;
+    }
+    ._ALERT{
+      position:relative;
+      top:20px;
+      font-size:20px;
+      color:red;
+      font-weight:600;
+    }
+.wrapper{
+    width:100%;
+    height:auto;
+    display:flex;
+    flex-direction:column;
+  }
+  .aForm{
+   position:relative;
+   width:100%;
+   height:100%;
+   display:flex;
+   flex-direction: column;
+   justify-content:center;
+   align-content:center;
+   border:0.5px solid rgb(55, 82, 161);
+   border-radius:10px;
+   top:40px;
+  }
+  #alerts{
+   text-align:center;
+   position:relative;
+   height:350px;
+   display:flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+  }
+  .templimit{
+    width:201px;
+    padding:50px 50px;
+    font-size:50px;
+    font-family:'Montserrat';
+    border:none;
+    border: 1px solid black;
+    border-radius:20px;
+  }
+  .selectTemp{
+    color:rgb(55, 82, 161);
+    font-size:23px;
+    position:relative;
+    margin-bottom:5px;
+  }
+  .genalert{
+    width:100%;
+    text-align: center;
+    font-size:25px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    color:rgb(55, 82, 161);
+    font-weight: 400;
+    position:relative;
+    top:10px;
+  }
+  .alertset{
+    display:block;
+    width:100%;
+    height:250px;
+    position:relative;
+    z-index:3;
+    border:0.5px solid rgb(55, 82, 161);
+    border-radius:10px;
+    margin-top:20px;
+    overflow:auto;
+    top:25px;
+  }
+  .submit{
+    border:none;
+    padding:15px 15px;
+    position:relative;
+    top:10px;
+    font-size:20px;
+    font-family:'Montserrat';
+    border-radius:15px;
+    background:rgb(55, 82, 161);
+    border: 1px solid black;
+    color: white;
+  }
+    @media screen and (max-width:  768px){
+      .title h2{
+         font-size:65px;  
+      }
+      .title h3{
+         font-size:20px;
+      }
+      .fa-bars{
+        display: block;
+        color: white;
+        font-size: 35px;
+        padding: 20px;
+        top:  0px;
+        left:  0px;
+        position: absolute;
+        z-index: 3;
+      }
+      .fa-window-close{
+        position: absolute;
+        left: 0;
+        top:  0;
+        padding: 10px;
+        z-index: 5;
+        font-size: 35px;
+
+      }
+      .fa-bars:hover,
+      .fa-window-close:hover{
+        cursor: pointer;
+      }
+      .sidemenu{
+        display: none;
+      }
+      nav .mobile-menu{
+        display: none;
+        justify-content: center;
+        background-color:white;
+        position: absolute;
+        width: 100%;
+        z-index: 10;
+      }
+      nav .mobile-menu ul{
+        list-style: none;
+      }
+      nav .mobile-menu ul li{
+        padding: 16px;
+      }
+      nav .mobile-menu a{
+        text-decoration: none;
+        color:rgb(8, 8, 8);
+        font-size: 21px;
+        text-align: center;
+      }
+      nav .mobile-menu a:hover{
+        color:royalblue;
+        transition: 0.3s all ease;
+      }
